@@ -87,10 +87,11 @@ export function ProductPage({ productId }: ProductPageProps) {
               </p>
             )}
           </div>
-
-          <button className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer">
+          <a href="https://www.instagram.com/direct/t/17843578770459426" target='_blank'>
+            <button className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer">
             Fale com o vendedor
           </button>
+          </a>
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-2">Descrição</h2>
