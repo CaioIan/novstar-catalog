@@ -4,7 +4,7 @@ import { products } from '@/data/products';
 import { formatCurrency } from '@/utils/format';
 
 interface ProductPageProps {
-  productId: string;
+  productId: number;
 }
 
 export function ProductPage({ productId }: ProductPageProps) {
@@ -15,14 +15,6 @@ export function ProductPage({ productId }: ProductPageProps) {
   }
 
   // Vamos simular que temos várias imagens para o produto
-  const productImages = [
-    product.imageUrl,
-    // Usando outras imagens da coleção para simular múltiplas imagens do produto
-    ...products
-      .filter((p) => p.id !== product.id)
-      .slice(0, 2)
-      .map((p) => p.imageUrl)
-  ];
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -30,7 +22,7 @@ export function ProductPage({ productId }: ProductPageProps) {
         <div className="hidden md:col-span-8 md:grid md:grid-cols-8 md:gap-4">
           {/* Coluna de miniaturas */}
           <div className="col-span-2 flex flex-col justify-between h-full">
-            {productImages.map((image, index) => (
+            {product?.imagesUrlColumn?.map((image, index) => (
               <div
                 key={index}
                 className="relative aspect-square border border-gray-200 rounded-md overflow-hidden cursor-pointer hover:border-gray-400 mb-4 last:mb-0"
@@ -102,9 +94,20 @@ export function ProductPage({ productId }: ProductPageProps) {
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-2">Descrição</h2>
-            <p className="text-gray-600">
-              {product.description || 'Este produto combina estilo, conforto e qualidade premium. Perfeito para diversas ocasiões, com tecido durável e acabamento de primeira linha.'}
-            </p>
+            <div>
+              <p className="text-gray-600">
+                👕100% ALGODÃO
+              </p>
+              <p className="text-gray-600">
+                🏅FIO 30.1 PENTEADO
+              </p>
+              <p className="text-gray-600">
+                🪡GOLA RIBANA COSTURA DUPLA
+              </p>
+              <p className="text-gray-600">
+                🧵REFORÇO OMBRO A OMBRO
+              </p>
+            </div>
           </div>
         </div>
       </div>

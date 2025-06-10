@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { formatCurrency } from '@/utils/format';
 
 interface ProductCardProps {
-  id: string;
+  id: number;
   name: string;
   price: number;
   promotionalPrice?: number;
@@ -45,10 +45,9 @@ export function ProductCard({
             <span className="text-xl font-bold text-gray-950">
               {formattedPromotionalPrice}
             </span>
-        </div>        <Link href={`/product/${id}`}>
-          <button className="bg-gray-950 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer hover:scale-105">
-            Ver Produto
-          </button>
+        </div>
+        <Link href={`/product/${id}`} className="bg-gray-950 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer hover:scale-105">
+          Ver Produto
         </Link>
         </div>
       </div>
