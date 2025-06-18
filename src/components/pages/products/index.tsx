@@ -1,7 +1,11 @@
+"use client";
+
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { products } from '@/data/products';
 import { formatCurrency } from '@/utils/format';
+
+import { sendGTMEvent } from '@next/third-parties/google'
 
 interface ProductPageProps {
   productId: number;
@@ -88,7 +92,7 @@ export function ProductPage({ productId }: ProductPageProps) {
             )}
           </div>
           <a href="https://wa.me/558592079518?text=Fala%20mano!%20Tenho%20interesse%20em%20uma%20pe%C3%A7a%20da%20VORSE!" target='_blank'>
-            <button className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer">
+            <button onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })} className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer">
             Fale com o vendedor
           </button>
           </a>
