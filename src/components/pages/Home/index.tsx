@@ -23,6 +23,7 @@ export function HomePage() {
             promotionalPrice={product.promotionalPrice}
             imageUrl={product.imageUrl}
             imageAlt={product.imageAlt}
+            isOutOfStock={product.isOutOfStock}
           />
         ))}
       </div>

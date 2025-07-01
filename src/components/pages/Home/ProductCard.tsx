@@ -13,6 +13,7 @@ interface ProductCardProps {
   promotionalPrice?: number;
   imageUrl: string;
   imageAlt?: string;
+  isOutOfStock?: boolean;
 }
 
 export function ProductCard({
@@ -21,8 +22,10 @@ export function ProductCard({
   price,
   promotionalPrice,
   imageUrl,
-  imageAlt = name
-}: ProductCardProps) {  const formattedPrice = formatCurrency(price);
+  imageAlt = name,
+  isOutOfStock = false
+}: ProductCardProps) {
+  const formattedPrice = formatCurrency(price);
   const formattedPromotionalPrice = promotionalPrice ? formatCurrency(promotionalPrice) : null;
 
   return (
@@ -36,6 +39,15 @@ export function ProductCard({
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
+          {/* Badge de produto esgotado - CARD */}
+          {isOutOfStock && (
+            <div className="absolute top-2 left-2">
+              <span className="inline-block bg-red-500 text-white text-xs font-bold px-2 py-1 rounded-full">
+                ESGOTADO
+              </span>
+            </div>
+
+          )}
         </div>
         <div className="p-4">
           <h3 className="text-lg font-medium text-gray-500 mb-2 line-clamp-2">
@@ -46,13 +58,16 @@ export function ProductCard({
               <span className={promotionalPrice ? 'text-sm text-gray-500 line-through' : 'text-xl font-bold text-gray-950'}>
                 {formattedPrice}
               </span>
-              <span className="text-xl font-bold text-gray-950">
-                {formattedPromotionalPrice}
-              </span>
-          </div>
-          <button className="bg-gray-950 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer hover:scale-105">
-            Ver Produto
-          </button>
+              {formattedPromotionalPrice && (
+                <span className="text-xl font-bold text-gray-950">
+                  {formattedPromotionalPrice}
+                </span>
+              )}
+            </div>
+            {/* Botão Ver Produto - sempre presente, mesmo para produtos esgotados */}
+            <button className="bg-gray-950 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer hover:scale-105">
+              Ver Produto
+            </button>
           </div>
         </div>
       </div>

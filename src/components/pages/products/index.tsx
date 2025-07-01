@@ -72,6 +72,15 @@ export function ProductPage({ productId }: ProductPageProps) {
         <div className="md:col-span-4">
           <h1 className="text-3xl font-bold text-gray-900 mb-4">{product.name}</h1>
 
+          {/* Badge de produto esgotado */}
+          {product.isOutOfStock && (
+            <div className="mb-4">
+              <span className="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
+                PRODUTO ESGOTADO
+              </span>
+            </div>
+          )}
+
           <div className="mb-6">
             {product.promotionalPrice ? (
               <>
@@ -91,11 +100,19 @@ export function ProductPage({ productId }: ProductPageProps) {
               </p>
             )}
           </div>
-          <a href="https://wa.me/558592079518?text=Fala%20mano!%20Tenho%20interesse%20em%20uma%20pe%C3%A7a%20da%20VORSE!" target='_blank'>
-            <button onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })} className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer">
-            Fale com o vendedor
-          </button>
-          </a>
+
+          {/* Botão condicional baseado no estoque */}
+          {product.isOutOfStock ? (
+            <button disabled className="w-full bg-gray-400 text-white py-3 px-6 rounded-md font-medium text-lg cursor-not-allowed">
+              Produto Esgotado
+            </button>
+          ) : (
+            <a href="https://wa.me/558592079518?text=Fala%20mano!%20Tenho%20interesse%20em%20uma%20pe%C3%A7a%20da%20VORSE!" target='_blank'>
+              <button onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })} className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer">
+                Fale com o vendedor
+              </button>
+            </a>
+          )}
 
           <div className="mt-8">
             <h2 className="text-xl font-semibold mb-2">Descrição</h2>
