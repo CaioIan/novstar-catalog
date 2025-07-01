@@ -64,6 +64,7 @@ export const products: Product[] = [
     name: 'Camisa Streetwear THUG NINE BLACK',
     price: 69.90,
     promotionalPrice: 49.90,
+    isOutOfStock: true,
     imagesUrlColumn: ['/products/camisasM/THUG001-PRE-M-DETALHE-FRENTE.jpeg', '/products/camisasM/THUG001-PRE-M-FRENTE.jpeg', '/products/camisasM/THUG001-PRE-M-DETALHE-COSTAS.jpeg'],
     imageUrl: '/products/camisasM/THUG001-PRE-M-COSTAS.jpeg',
     imageAlt: 'Camisa Streetwear THUG NINE BLACK - Costas'
