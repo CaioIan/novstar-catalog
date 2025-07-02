@@ -101,6 +101,7 @@ export const products: Product[] = [
     name: 'Camisa Streetwear NK SWOOSH BLACK',
     price: 69.90,
     promotionalPrice: 49.90,
+    isOutOfStock: true,
     imagesUrlColumn: ['/products/camisasM/NIKESW001-PRE-M-DETALHE-COSTA.jpeg', '/products/camisasM/NIKESW001-PRE-M-FRENTE.jpeg', '/products/camisasM/NIKESW001-PRE-M-DETALHE-FRENTE.jpeg'],
     imageUrl: '/products/camisasM/NIKE001-PRE-M-COSTAS.jpeg',
     imageAlt: 'Camisa Streetwear NK SWOOSH BLACK - Costas'
