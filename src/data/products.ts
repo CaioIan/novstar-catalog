@@ -8,6 +8,7 @@ export interface Product {
   imageAlt: string;
   description?: string;
   isOutOfStock?: boolean;
+  sizes?: string[]; // ← Nova propriedade
 }
 
 export const products: Product[] = [
@@ -24,6 +25,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: 'Camisa Streetwear NK COLORED BLACK',
+    sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
     imagesUrlColumn: ['/products/camisasM/NIKECOL001-PRE-M-DETALHE-COSTA.jpeg', '/products/camisasM/NIKECOL001-PRE-M-FRENTE.jpeg', '/products/camisasM/NIKECOL001-PRE-M-DETALHE-FRENTE.jpeg'],
@@ -33,6 +35,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: 'Camisa Streetwear NK X STUSSY BLACK',
+    sizes: ['G'],
     price: 69.90,
     promotionalPrice: 49.90,
     imagesUrlColumn: ['/products/camisasG/NIKEST001-PRE-G-DETALHE-COSTA.jpeg', '/products/camisasG/NIKEST001-PRE-G-FRENTE.jpeg', '/products/camisasG/NIKEST001-PRE-G-DETALHE-FRENTE.jpeg'],
@@ -72,6 +75,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: 'Camisa Streetwear TRIP SIDE BLACK',
+    sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
     imagesUrlColumn: ['/products/camisasM/TRIP001-PRE-M-DETALHE-FRENTE.jpeg', '/products/camisasM/TRIP001-PRE-M-FRENTE.jpeg', '/products/camisasM/TRIP001-PRE-M-DETALHE-COSTAS.jpeg'],
@@ -81,6 +85,7 @@ export const products: Product[] = [
   {
     id: 8,
     name: 'Camisa Streetwear TRIP SIDE BLACK',
+    sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
     imagesUrlColumn: ['/products/camisasM/TRIPAZ001-PRE-M-DETALHE-FRENTE.jpeg', '/products/camisasM/TRIPAZ001-PRE-M-FRENTE.jpeg', '/products/camisasM/TRIPAZ001-PRE-M-DETALHE-COSTAS.jpeg'],
@@ -90,6 +95,7 @@ export const products: Product[] = [
   {
     id: 9,
     name: 'Camisa Streetwear CHRONIC WHITE',
+    sizes: ['G'],
     price: 69.90,
     promotionalPrice: 49.90,
     imagesUrlColumn: ['/products/camisasG/CHRO001-BRA-G-DETALHE-FRENTE.jpeg', '/products/camisasG/CHRO001-BRA-G-FRENTE.jpeg', '/products/camisasG/CHRO001-BRA-G-DETALHE-COSTAS.jpeg'],

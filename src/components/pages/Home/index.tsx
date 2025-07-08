@@ -24,6 +24,7 @@ export function HomePage() {
             imageUrl={product.imageUrl}
             imageAlt={product.imageAlt}
             isOutOfStock={product.isOutOfStock}
+            sizes={product.sizes} // ← Adicione esta linha
           />
         ))}
       </div>

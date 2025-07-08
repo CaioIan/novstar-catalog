@@ -18,7 +18,6 @@ export function ProductPage({ productId }: ProductPageProps) {
     notFound();
   }
 
-  // Vamos simular que temos várias imagens para o produto
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -78,6 +77,23 @@ export function ProductPage({ productId }: ProductPageProps) {
               <span className="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
                 PRODUTO ESGOTADO
               </span>
+            </div>
+          )}
+
+          {/* Tamanhos - só aparece se o produto tiver a propriedade 'sizes' */}
+          {product.sizes && product.sizes.length > 0 && (
+            <div className="mb-4">
+              <h3 className="text-lg font-medium text-gray-900 mb-2">Tamanhos Disponíveis:</h3>
+              <div id='tamContainer' className='flex row gap-2'>
+                {product.sizes.map((size) => (
+                  <p
+                    key={size}
+                    className='w-[40px] h-[20px] border border-black flex items-center justify-center rounded-sm pt-[2px] hover:bg-gray-100 transition-colors'
+                  >
+                    {size}
+                  </p>
+                ))}
+              </div>
             </div>
           )}
 
