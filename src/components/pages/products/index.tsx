@@ -80,23 +80,7 @@ export function ProductPage({ productId }: ProductPageProps) {
             </div>
           )}
 
-          {/* Tamanhos - só aparece se o produto tiver a propriedade 'sizes' */}
-          {product.sizes && product.sizes.length > 0 && (
-            <div className="mb-4">
-              <h3 className="text-lg font-medium text-gray-900 mb-2">Tamanhos Disponíveis:</h3>
-              <div id='tamContainer' className='flex row gap-2'>
-                {product.sizes.map((size) => (
-                  <p
-                    key={size}
-                    className='w-[40px] h-[20px] border border-black flex items-center justify-center rounded-sm pt-[2px] hover:bg-gray-100 transition-colors'
-                  >
-                    {size}
-                  </p>
-                ))}
-              </div>
-            </div>
-          )}
-
+          {/* Seção de preços ANTES dos tamanhos */}
           <div className="mb-6">
             {product.promotionalPrice ? (
               <>
@@ -116,6 +100,23 @@ export function ProductPage({ productId }: ProductPageProps) {
               </p>
             )}
           </div>
+
+          {/* Tamanhos - DEPOIS dos preços */}
+          {product.sizes && product.sizes.length > 0 && (
+            <div className="mb-6">
+              <h3 className="text-lg font-medium text-gray-900 mb-2">Tamanhos Disponíveis:</h3>
+              <div id='tamContainer' className='flex row gap-2'>
+                {product.sizes.map((size) => (
+                  <p
+                    key={size}
+                    className='w-[40px] h-[20px] border border-black flex items-center justify-center rounded-sm pt-[2px] hover:bg-gray-100 transition-colors'
+                  >
+                    {size}
+                  </p>
+                ))}
+              </div>
+            </div>
+          )}
 
           {/* Botão condicional baseado no estoque */}
           {product.isOutOfStock ? (
