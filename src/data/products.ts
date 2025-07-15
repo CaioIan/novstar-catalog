@@ -8,108 +8,98 @@ export interface Product {
   imageAlt: string;
   description?: string;
   isOutOfStock?: boolean;
-  sizes?: string[]; // ← Nova propriedade
+  sizes?: string[]; // Tamanhos disponíveis
 }
 
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Camisa Streetwear NK SINCE 2012 BLACK',
+    name: 'High Stamp Black',
     price: 69.90,
     promotionalPrice: 49.90,
-    isOutOfStock: true,
-    imagesUrlColumn: ['/products/camisasM/NIKE001-PRE-M-DETALHE-FRENTE-VEM.jpeg', '/products/camisasM/NIKE001-PRE-M-FRENTE-VEM.jpeg', '/products/camisasM/NIKE001-PRE-M-DETALHE-COSTAS-VEM.jpeg'],
-    imageUrl: '/products/camisasM/NIKE001-PRE-M-COSTAS-VEM.jpeg',
-    imageAlt: 'Camisa Streetwear NK SINCE 2012 BLACK - Costas'
+    sizes: ['M'], // Exemplo: apenas M e G disponíveis
+    imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Stamp_Black_Front.webp', '/products/details/camisasM/High_Tee_Stamp_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Stamp_Black_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasM/High_Tee_Stamp_Black_Back.webp',
+    imageAlt: 'Camisa High Company Stamp Black, com estampa verde nas costas e estampa de estrela verde na frente no lado esquedo do peito da camisa'
   },
   {
     id: 2,
-    name: 'Camisa Streetwear NK COLORED BLACK',
-    sizes: ['M'],
+    name: 'High Tee Chaveiro Black',
+    sizes: ['M'], // Exemplo: apenas M e GG disponíveis
     price: 69.90,
     promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/camisasM/NIKECOL001-PRE-M-DETALHE-COSTA.jpeg', '/products/camisasM/NIKECOL001-PRE-M-FRENTE.jpeg', '/products/camisasM/NIKECOL001-PRE-M-DETALHE-FRENTE.jpeg'],
-    imageUrl: '/products/camisasM/NIKECOL001-PRE-M-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear NK COLORED BLACK - Costas'
+    imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Front.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Back.webp',
+    imageAlt: 'Camisa High Tee Chaveiro Black com estampa de um chaveiro nas costas e estampa da wordmark da High no lado esquerdo do peito da camisa'
   },
   {
     id: 3,
-    name: 'Camisa Streetwear NK X STUSSY BLACK',
-    sizes: ['G'],
+    name: 'Chronic Tee São Jorge Black',
     price: 69.90,
     promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/camisasG/NIKEST001-PRE-G-DETALHE-COSTA.jpeg', '/products/camisasG/NIKEST001-PRE-G-FRENTE.jpeg', '/products/camisasG/NIKEST001-PRE-G-DETALHE-FRENTE.jpeg'],
-    imageUrl: '/products/camisasG/NIKEST001-PRE-G-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear NK X STUSSY BLACK - Costas'
+    sizes: ['G'], // Exemplo: apenas G disponível
+    imagesUrlColumn: ['/products/mockups_still/camisasG/Chronic_Tee_SãoJorge_Black_Front.webp', '/products/details/camisasG/Chronic_Tee_SãoJorge_Black_Detail_Back.webp', '/products/details/camisasG/Chronic_Tee_SãoJorge_Black_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasG/Chronic_Tee_SãoJorge_Black_Back.webp',
+    imageAlt: 'Camisa Chronic Tee São Jorge Black com estampa de São Jorge nas costas'
   },
   {
     id: 4,
-    name: 'Camisa Streetwear NK NIKE DAY OFF',
+    name: 'Trip Side Dragon Tiger Red',
+    sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
-    isOutOfStock: true,
-    imagesUrlColumn: ['/products/camisasM/NIKE001-OFF-M-FRENTE.jpeg', '/products/camisasM/NIKE001-OFF-M-DETALHE-FRENTE.jpeg', '/products/camisasM/NIKE001-OFF-M-DETALHES-COSTAS.jpeg'],
-    imageUrl: '/products/camisasM/NIKE001-OFF-M-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear NK NIKE DAY OFF - Costas'
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Front.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Back.jpg', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Front.jpeg'],
+    imageUrl: '/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Back.webp',
+    imageAlt: 'Camisa Streetwear NK X STUSSY BLACK - Costas'
   },
   {
     id: 5,
-    name: 'Camisa Streetwear THUG NINE WHITE',
+    name: 'High Tee Origami Black',
     price: 69.90,
     promotionalPrice: 49.90,
-    isOutOfStock: true,
-    imagesUrlColumn: ['/products/camisasM/THUG001-BRA-M-DETALHE-FRENTE.jpeg', '/products/camisasM/THUG001-BRA-M-FRENTE.jpeg', '/products/camisasM/THUG001-BRA-M-DETALHE-COSTAS.jpeg'],
-    imageUrl: '/products/camisasM/THUG001-BRA-M-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear THUG NINE WHITE - Costas'
-  },
-  {
-    id: 6,
-    name: 'Camisa Streetwear THUG NINE BLACK',
-    price: 69.90,
-    promotionalPrice: 49.90,
-    isOutOfStock: true,
-    imagesUrlColumn: ['/products/camisasM/THUG001-PRE-M-DETALHE-FRENTE.jpeg', '/products/camisasM/THUG001-PRE-M-FRENTE.jpeg', '/products/camisasM/THUG001-PRE-M-DETALHE-COSTAS.jpeg'],
-    imageUrl: '/products/camisasM/THUG001-PRE-M-COSTAS.jpeg',
+    sizes: ['G', 'GG'],
+    imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Origami_Black_Front.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Back.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasG/High_Tee_Origami_Black_Back.webp',
     imageAlt: 'Camisa Streetwear THUG NINE BLACK - Costas'
   },
   {
-    id: 7,
-    name: 'Camisa Streetwear TRIP SIDE BLACK',
-    sizes: ['M'],
+    id: 6,
+    name: 'VLone Spider White',
     price: 69.90,
     promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/camisasM/TRIP001-PRE-M-DETALHE-FRENTE.jpeg', '/products/camisasM/TRIP001-PRE-M-FRENTE.jpeg', '/products/camisasM/TRIP001-PRE-M-DETALHE-COSTAS.jpeg'],
-    imageUrl: '/products/camisasM/TRIP001-PRE-M-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear TRIP SIDE BLACK - Costas'
+    sizes: ['M'],
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Front.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Bakc.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Back.webp',
+    imageAlt: 'Camisa Streetwear NK NIKE DAY OFF - Costas'
+  },
+  {
+    id: 7,
+    name: 'Blunt Tee Basket Fire',
+    price: 69.90,
+    promotionalPrice: 49.90,
+    sizes: ['M'],
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Blunt_Tee_BasketFire_White_Front.webp', '/products/details/camisasM/Blunt_Tee_BasketFire_White_Detail_Back.webp'],
+    imageUrl: '/products/mockups_still/camisasM/Blunt_Tee_BasketFire_White_Back.webp',
+    imageAlt: 'Camisa Streetwear THUG NINE WHITE - Costas'
   },
   {
     id: 8,
-    name: 'Camisa Streetwear TRIP SIDE BLACK',
-    sizes: ['M'],
+    name: 'Nike Tee Air 90 Black',
     price: 69.90,
     promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/camisasM/TRIPAZ001-PRE-M-DETALHE-FRENTE.jpeg', '/products/camisasM/TRIPAZ001-PRE-M-FRENTE.jpeg', '/products/camisasM/TRIPAZ001-PRE-M-DETALHE-COSTAS.jpeg'],
-    imageUrl: '/products/camisasM/TRIPAZ001-PRE-M-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear TRIP SIDE BLACK - Costas'
+    sizes: ['M'],
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Back.webp',
+    imageAlt: 'Camisa Streetwear THUG NINE BLACK - Costas'
   },
   {
     id: 9,
-    name: 'Camisa Streetwear CHRONIC WHITE',
+    name: 'High Tee Soldiers Black',
+    price: 69.90,
+    promotionalPrice: 49.90,
     sizes: ['G'],
-    price: 69.90,
-    promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/camisasG/CHRO001-BRA-G-DETALHE-FRENTE.jpeg', '/products/camisasG/CHRO001-BRA-G-FRENTE.jpeg', '/products/camisasG/CHRO001-BRA-G-DETALHE-COSTAS.jpeg'],
-    imageUrl: '/products/camisasG/CHRO001-BRA-G-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear CHRONIC WHITE - Costas'
+    imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Front.webp', '/products/details/camisasG/High_Tee_Soldiers_Black_Detail_Back.webp'],
+    imageUrl: '/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Back.webp',
+    imageAlt: 'Camisa Streetwear THUG NINE BLACK - Costas'
   },
-  {
-    id: 10,
-    name: 'Camisa Streetwear NK SWOOSH BLACK',
-    price: 69.90,
-    promotionalPrice: 49.90,
-    isOutOfStock: true,
-    imagesUrlColumn: ['/products/camisasM/NIKESW001-PRE-M-DETALHE-COSTA.jpeg', '/products/camisasM/NIKESW001-PRE-M-FRENTE.jpeg', '/products/camisasM/NIKESW001-PRE-M-DETALHE-FRENTE.jpeg'],
-    imageUrl: '/products/camisasM/NIKE001-PRE-M-COSTAS.jpeg',
-    imageAlt: 'Camisa Streetwear NK SWOOSH BLACK - Costas'
-  }
 ];

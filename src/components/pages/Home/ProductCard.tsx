@@ -3,8 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { formatCurrency } from '@/utils/format';
-
-import { sendGTMEvent } from '@next/third-parties/google'
+import { sendGTMEvent } from '@next/third-parties/google';
 
 interface ProductCardProps {
   id: number;
@@ -25,10 +24,13 @@ export function ProductCard({
   imageUrl,
   imageAlt = name,
   isOutOfStock = false,
-  sizes
+  sizes = []
 }: ProductCardProps) {
   const formattedPrice = formatCurrency(price);
   const formattedPromotionalPrice = promotionalPrice ? formatCurrency(promotionalPrice) : null;
+
+  // Todos os tamanhos sempre visíveis
+  const allSizes = ['M', 'G', 'GG'];
 
   return (
     <Link onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id, name } })} href={`/product/${id}`}>
@@ -41,41 +43,46 @@ export function ProductCard({
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
-          {/* Removida a badge ESGOTADO daqui */}
+          {/* Badge ESGOTADO no canto inferior esquerdo da imagem */}
+          {isOutOfStock && (
+            <div className="absolute bottom-2 left-2">
+              <span className="inline-block bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded border border-red-200">
+                ESGOTADO
+              </span>
+            </div>
+          )}
         </div>
         <div className="p-4">
           <h3 className="text-lg font-medium text-gray-500 mb-2 line-clamp-2">
             {name}
           </h3>
-
-          {/* Seção de tamanhos ou badge ESGOTADO */}
+          
+          {/* Seção de tamanhos - TODOS os tamanhos sempre visíveis */}
           <div className="mb-3 h-[44px] flex flex-col justify-start">
-            {isOutOfStock ? (
-              // Badge ESGOTADO no lugar dos tamanhos
-              <>
-                <span className="inline-block bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded-[2px] border border-red-200">
-                  ESGOTADO
-                </span>
-              </>
-            ) : sizes && sizes.length > 0 ? (
-              // Tamanhos para produtos disponíveis
-              <>
-                <p className="text-sm text-gray-600 mb-1">Tamanhos:</p>
-                <div className="flex gap-1">
-                  {sizes.map((size) => (
-                    <span 
-                      key={size}
-                      className="inline-block bg-gray-100 text-gray-700 text-xs px-2 py-1 rounded border"
-                    >
-                      {size}
-                    </span>
-                  ))}
-                </div>
-              </>
-            ) : (
-              // Espaço vazio para produtos sem tamanhos
-              <div></div>
-            )}
+            <p className="text-sm text-gray-600 mb-1">Tamanhos:</p>
+            <div className="flex gap-1">
+              {allSizes.map((size) => {
+                const isAvailable = sizes.includes(size);
+                return (
+                  <span 
+                    key={size}
+                    className={`inline-block text-xs px-2 py-1 rounded border transition-all duration-200 relative ${
+                      isAvailable 
+                        ? 'bg-gray-100 text-gray-700 border-gray-300 opacity-100' 
+                        : 'bg-gray-50 text-gray-400 border-gray-200 opacity-80'
+                    }`}
+                  >
+                    {size}
+                    {/* Traço diagonal para tamanhos não disponíveis */}
+                    {!isAvailable && (
+                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                        <div className="w-full h-[2px] bg-gray-500 rotate-45 transform origin-center"></div>
+                      </div>
+                    )}
+                  </span>
+                );
+              })}
+            </div>
           </div>
 
           <div className="flex items-center justify-between">
@@ -89,7 +96,6 @@ export function ProductCard({
                 </span>
               )}
             </div>
-            {/* Botão Ver Produto - sempre presente */}
             <button className="bg-gray-950 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer hover:scale-105">
               Ver Produto
             </button>

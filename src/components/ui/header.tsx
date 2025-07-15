@@ -16,6 +16,7 @@ export function Header() {
           ←
         </Link>
       )}
+      
       <NextImage
         src={logo}
         alt="Logo"
