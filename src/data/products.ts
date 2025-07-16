@@ -48,7 +48,7 @@ export const products: Product[] = [
     sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Front.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Back.jpg', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Front.jpeg'],
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Front.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Back.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Back.webp',
     imageAlt: 'Camisa Trip Side Dragon Tiger branca com estampa de dragão e tigre nas costas em detalhes vermelhos'
   },
@@ -68,9 +68,9 @@ export const products: Product[] = [
     price: 69.90,
     promotionalPrice: 49.90,
     sizes: ['M'],
-    imagesUrlColumn: ['/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Front.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Bakc.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Front.webp'],
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Front.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Back.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Back.webp',
-    imageAlt: 'Camisa VLone Spider White branca com estampa de aranha e logo V nas costas e estampa de um esqueleto segurando uma aranha na parte inferior esquerda da frente da camisa'
+    imageAlt: 'Camisa VLone Spider White branca com estampa de aranha e logo V nas costas'
   },
   {
     id: 7,

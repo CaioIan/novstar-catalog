@@ -8,11 +8,11 @@ import { formatCurrency } from '@/utils/format';
 import { sendGTMEvent } from '@next/third-parties/google';
 
 interface ProductPageProps {
-  productId: string;
+  productId: string; // Manter como string
 }
 
 export function ProductPage({ productId }: ProductPageProps) {
-  const product = products.find(p => p.id === parseInt(productId));
+  const product = products.find(p => p.id === parseInt(productId)); // Converter aqui
   
   if (!product) {
     notFound();

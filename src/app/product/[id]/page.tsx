@@ -1,18 +1,16 @@
 import { ProductPage } from '@/components/pages/products';
 import { BaseLayout } from '@/layout/BaseLayout';
 
-type ProductPageRouteProps = {
-  params: Promise<{ id: string }>;
-};
+interface PageProps {
+  params: {
+    id: string; // Parâmetro da URL sempre é string
+  };
+}
 
-
-export default async function ProductPageRoute({ params }: ProductPageRouteProps) {
-  const { id } = await params;
-  const productId = parseInt(id, 10);
-
+export default function Page({ params }: PageProps) {
   return (
     <BaseLayout>
-      <ProductPage productId={productId} />
+      <ProductPage productId={params.id} />
     </BaseLayout>
   );
 }
