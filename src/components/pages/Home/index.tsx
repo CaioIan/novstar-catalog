@@ -5,7 +5,7 @@ export function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <img src="/drops/drop street 2.png" alt="Drop Street Collection" />
+        <img src="/drops/drop_street_2_ banner.png" alt="Drop Street Collection" />
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -26,7 +26,7 @@ export function HomePage() {
 
       <div className="text-center mt-12">
         <p className="text-gray-500">
-          Mais produtos em breve!
+          Drop Street 2 por Vorse Company
         </p>
       </div>
     </div>

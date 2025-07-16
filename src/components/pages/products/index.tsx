@@ -39,6 +39,18 @@ export function ProductPage({ productId }: ProductPageProps) {
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 500px, (max-width: 1280px) 600px, 700px"
             />
+            
+            {/* Badge DROP ST 2 no canto superior direito */}
+            <div className="absolute top-4 right-4">
+              <div className="relative w-20 h-8">
+                <Image
+                  src="/drops/drop_st_2_badge.png"
+                  alt="DROP ST 2"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+            </div>
           </div>
           
           {/* Miniaturas */}

@@ -43,6 +43,19 @@ export function ProductCard({
             className="object-cover group-hover:scale-105 transition-transform duration-300"
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
+          
+          {/* Badge DROP ST 2 no canto superior direito */}
+          <div className="absolute top-2 right-2">
+            <div className="relative w-16 h-6">
+              <Image
+                src="/drops/drop_st_2_badge.png"
+                alt="DROP ST 2"
+                fill
+                className="object-contain"
+              />
+            </div>
+          </div>
+          
           {/* Badge ESGOTADO no canto inferior esquerdo da imagem */}
           {isOutOfStock && (
             <div className="absolute bottom-2 left-2">
