@@ -59,8 +59,8 @@ export function ProductCard({
           {/* Badge ESGOTADO no canto inferior esquerdo da imagem */}
           {isOutOfStock && (
             <div className="absolute bottom-2 left-2">
-              <span className="inline-block bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded border border-red-200">
-                ESGOTADO
+              <span className="inline-block bg-black text-white text-xs font-bold px-2 py-1 rounded-[20px] border border-gray">
+                Esgotado
               </span>
             </div>
           )}

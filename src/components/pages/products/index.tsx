@@ -86,8 +86,8 @@ export function ProductPage({ productId }: ProductPageProps) {
           {/* Badge de produto esgotado */}
           {product.isOutOfStock && (
             <div className="mb-4">
-              <span className="inline-block bg-red-100 text-red-800 text-sm font-medium px-3 py-1 rounded-full">
-                PRODUTO ESGOTADO
+              <span className="inline-block bg-black text-white text-sm font-medium px-3 py-1 rounded-full">
+                Produto esgotado
               </span>
             </div>
           )}

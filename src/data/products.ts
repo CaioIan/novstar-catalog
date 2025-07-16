@@ -37,7 +37,7 @@ export const products: Product[] = [
     name: 'Chronic Tee São Jorge Black',
     price: 69.90,
     promotionalPrice: 49.90,
-    sizes: ['G'],
+    isOutOfStock: true,
     imagesUrlColumn: ['/products/mockups_still/camisasG/Chronic_Tee_SãoJorge_Black_Front.webp', '/products/details/camisasG/Chronic_Tee_SãoJorge_Black_Detail_Back.webp', '/products/details/camisasG/Chronic_Tee_SãoJorge_Black_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasG/Chronic_Tee_SãoJorge_Black_Back.webp',
     imageAlt: 'Camisa Chronic Tee São Jorge Black preta com estampa artística de São Jorge nas costas'
@@ -45,9 +45,9 @@ export const products: Product[] = [
   {
     id: 4,
     name: 'Trip Side Dragon Tiger Red',
-    sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
+    isOutOfStock: true,
     imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Front.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Back.jpg', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Front.jpeg'],
     imageUrl: '/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Back.webp',
     imageAlt: 'Camisa Trip Side Dragon Tiger branca com estampa de dragão e tigre nas costas em detalhes vermelhos'
