@@ -60,7 +60,7 @@ export function ProductPage({ productId }: ProductPageProps) {
                 <button
                   key={index}
                   onClick={() => setSelectedImageIndex(index)}
-                  className={`relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all ${
+                  className={`relative w-20 h-20 flex-shrink-0 rounded-lg overflow-hidden border-2 transition-all cursor-pointer ${
                     selectedImageIndex === index 
                       ? 'border-gray-900' 
                       : 'border-gray-200 hover:border-gray-400'
