@@ -48,7 +48,7 @@ export const products: Product[] = [
     sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
-    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Front.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Back.jpg', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Front.jpeg'],
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Front.webp', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Back.jpg', '/products/details/camisasM/Trip_Tee_Dragon_White_Details_Frontt.jpeg'],
     imageUrl: '/products/mockups_still/camisasM/Trip_Tee_Dragon_White_Back.webp',
     imageAlt: 'Camisa Trip Side Dragon Tiger branca com estampa de dragão e tigre nas costas em detalhes vermelhos'
   },
