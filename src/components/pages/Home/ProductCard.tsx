@@ -24,13 +24,11 @@ export function ProductCard({
   imageUrl,
   imageAlt = name,
   isOutOfStock = false,
-  sizes = []
 }: ProductCardProps) {
   const formattedPrice = formatCurrency(price);
   const formattedPromotionalPrice = promotionalPrice ? formatCurrency(promotionalPrice) : null;
 
   // Todos os tamanhos sempre visíveis
-  const allSizes = ['M', 'G', 'GG'];
 
   return (
     <Link onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id, name } })} href={`/product/${id}`}>
@@ -70,34 +68,6 @@ export function ProductCard({
             {name}
           </h3>
           
-          {/* Seção de tamanhos - TODOS os tamanhos sempre visíveis */}
-          <div className="mb-3 h-[44px] flex flex-col justify-start">
-            <p className="text-sm text-gray-600 mb-1">Tamanhos:</p>
-            <div className="flex gap-1">
-              {allSizes.map((size) => {
-                const isAvailable = sizes.includes(size);
-                return (
-                  <span 
-                    key={size}
-                    className={`inline-block text-xs px-2 py-1 rounded border transition-all duration-200 relative ${
-                      isAvailable 
-                        ? 'bg-gray-100 text-gray-700 border-gray-300 opacity-100' 
-                        : 'bg-gray-50 text-gray-400 border-gray-200 opacity-80'
-                    }`}
-                  >
-                    {size}
-                    {/* Traço diagonal para tamanhos não disponíveis */}
-                    {!isAvailable && (
-                      <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                        <div className="w-full h-[2px] bg-gray-500 rotate-45 transform origin-center"></div>
-                      </div>
-                    )}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
-
           <div className="flex items-center justify-between">
             <div className="flex flex-col">
               <span className={promotionalPrice ? 'text-sm text-gray-500 line-through' : 'text-xl font-bold text-gray-950'}>
