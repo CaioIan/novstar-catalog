@@ -67,6 +67,7 @@ export const products: Product[] = [
     name: 'VLone Spider White',
     price: 69.90,
     promotionalPrice: 49.90,
+    isOutOfStock: true,
     sizes: ['M'],
     imagesUrlColumn: ['/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Front.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Back.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Back.webp',
