@@ -168,10 +168,10 @@ export function ProductPage({ productId }: ProductPageProps) {
           <div>
             <h2 className="text-xl font-semibold mb-2">Descrição</h2>
             <div className="space-y-1">
-              <p className="text-gray-600">👕 100% ALGODÃO</p>
-              <p className="text-gray-600">🏅 FIO 30.1 PENTEADO</p>
-              <p className="text-gray-600">🪡 GOLA RIBANA COSTURA DUPLA</p>
-              <p className="text-gray-600">🧵 REFORÇO OMBRO A OMBRO</p>
+              <p className="text-gray-600">Malha 100% algodão: macia e resistente</p>
+              <p className="text-gray-600">Fio 30.1 penteado: qualidade superior no toque e durabilidade</p>
+              <p className="text-gray-600">Reforço ombro a ombro: acabamento firme</p>
+              <p className="text-gray-600">Modelagem Oversized</p>
             </div>
           </div>
         </div>
