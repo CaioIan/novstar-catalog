@@ -42,6 +42,15 @@ export function ProductCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           
+          {/* Badge ESGOTADO no canto superior esquerdo da imagem */}
+          {isOutOfStock && (
+            <div className="absolute top-2 left-2">
+              <span className="inline-block bg-black text-white text-xs font-bold px-2 py-1 rounded-[20px] border border-gray">
+                Esgotado
+              </span>
+            </div>
+          )}
+          
           {/* Badge DROP ST 2 no canto superior direito */}
           <div className="absolute top-2 right-2">
             <div className="relative w-16 h-6">
@@ -53,15 +62,6 @@ export function ProductCard({
               />
             </div>
           </div>
-          
-          {/* Badge ESGOTADO no canto inferior esquerdo da imagem */}
-          {isOutOfStock && (
-            <div className="absolute bottom-2 left-2">
-              <span className="inline-block bg-black text-white text-xs font-bold px-2 py-1 rounded-[20px] border border-gray">
-                Esgotado
-              </span>
-            </div>
-          )}
         </div>
         <div className="p-4">
           <h3 className="text-lg font-medium text-gray-500 mb-2 line-clamp-2">
