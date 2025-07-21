@@ -14,6 +14,8 @@ interface ProductPageProps {
 export function ProductPage({ productId }: ProductPageProps) {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [selectedColor, setSelectedColor] = useState<string>('');
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const [isHovering, setIsHovering] = useState(false);
   
   const product = products.find(p => p.id === parseInt(productId));
   
@@ -32,6 +34,14 @@ export function ProductPage({ productId }: ProductPageProps) {
   
   // Todos os tamanhos sempre visíveis
   const allSizes = ['M', 'G', 'GG'];
+
+  // Função para controlar o movimento do mouse na imagem
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setMousePosition({ x, y });
+  };
 
   // Helper para cores de fundo dos círculos
   const getColorBackground = (color: string): string => {
@@ -56,18 +66,28 @@ export function ProductPage({ productId }: ProductPageProps) {
         
         {/* Coluna da imagem principal e miniaturas */}
         <div className="md:col-span-8">
-          <div className="relative mb-4 bg-gray-100 rounded-lg overflow-hidden w-full max-w-[700px] aspect-square mx-auto">
+          <div 
+            className="relative mb-4 bg-gray-100 rounded-lg overflow-hidden w-full max-w-[700px] aspect-square mx-auto"
+            onMouseMove={handleMouseMove}
+            onMouseEnter={() => setIsHovering(true)}
+            onMouseLeave={() => setIsHovering(false)}
+          >
             <Image
               src={allImages[selectedImageIndex]}
               alt={product.imageAlt}
               fill
-              className="object-cover"
+              className={`object-cover ease-out ${
+                isHovering ? 'scale-300' : 'scale-100'
+              }`}
+              style={{
+                transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
+              }}
               priority
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 500px, (max-width: 1280px) 600px, 700px"
             />
             
             {/* Badge DROP ST 2 no canto superior direito */}
-            <div className="absolute top-4 right-4">
+            <div className="absolute top-4 right-4 z-10">
               <div className="relative w-20 h-8">
                 <Image
                   src="/drops/drop_st_2_badge.png"
