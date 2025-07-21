@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
 import { products } from '@/data/products';
@@ -8,21 +8,47 @@ import { formatCurrency } from '@/utils/format';
 import { sendGTMEvent } from '@next/third-parties/google';
 
 interface ProductPageProps {
-  productId: string; // Manter como string
+  productId: string;
 }
 
 export function ProductPage({ productId }: ProductPageProps) {
-  const product = products.find(p => p.id === parseInt(productId)); // Converter aqui
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [selectedColor, setSelectedColor] = useState<string>('');
+  
+  const product = products.find(p => p.id === parseInt(productId));
   
   if (!product) {
     notFound();
   }
 
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  // Inicializar cor selecionada - CORREÇÃO: usar useEffect
+  useEffect(() => {
+    if (product?.colorsAvailable && product.colorsAvailable.length > 0) {
+      setSelectedColor(product.colorsAvailable[0]);
+    }
+  }, [product]);
+
   const allImages = [product.imageUrl, ...(product.imagesUrlColumn || [])];
   
   // Todos os tamanhos sempre visíveis
   const allSizes = ['M', 'G', 'GG'];
+
+  // Helper para cores de fundo dos círculos
+  const getColorBackground = (color: string): string => {
+    const colorMap: Record<string, string> = {
+      'Preto': 'bg-black',
+      'Branco': 'bg-white border border-gray-400',
+      'Cinza': 'bg-gray-500',
+      'Off': 'bg-[#FCF3EA] border border-gray-300',
+      'Vermelho': 'bg-red-500',
+      'Azul': 'bg-blue-500',
+      'Verde': 'bg-green-500',
+      'Navy': 'bg-blue-900',
+      'Marrom': 'bg-amber-800',
+    };
+    
+    return colorMap[color] || 'bg-gray-200';
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -113,6 +139,31 @@ export function ProductPage({ productId }: ProductPageProps) {
             )}
           </div>
 
+           {/* Cores disponíveis - SEMPRE mostrar se existir cores - RESPONSIVO */}
+          {product.colorsAvailable && product.colorsAvailable.length > 0 && (
+            <div className="mb-4 sm:mb-6">
+              <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2">
+                Cor: <span className="font-normal">{selectedColor}</span>
+              </h3>
+              <div className="flex gap-2 sm:gap-3">
+                {product.colorsAvailable.map((color) => (
+                  <button
+                    key={color}
+                    onClick={() => setSelectedColor(color)}
+                    className={`cursor-pointer relative w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 transition-all duration-200 ${
+                      selectedColor === color
+                        ? 'border-gray-900 scale-110'
+                        : 'border-gray-300 hover:border-gray-500'
+                    }`}
+                  >
+                    <div className={`w-full h-full rounded-full ${getColorBackground(color)}`}></div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+
           {/* Tamanhos - TODOS sempre visíveis */}
           <div className="mb-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">Tamanhos:</h3>
@@ -138,6 +189,7 @@ export function ProductPage({ productId }: ProductPageProps) {
                   </span>
                 );
               })}
+
             </div>
           </div>
 
@@ -157,9 +209,9 @@ export function ProductPage({ productId }: ProductPageProps) {
             >
               <button 
                 onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })}
-                className="w-full bg-gray-950 hover:bg-gray-800 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 mb-8"
+                className="w-full bg-black hover:bg-[#373737] cursor-pointer text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 mb-8"
               >
-                Fale com o vendedor
+                COMPRAR
               </button>
             </a>
           )}

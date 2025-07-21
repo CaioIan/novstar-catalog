@@ -7,6 +7,7 @@ export interface Product {
   imageUrl: string;
   imageAlt: string;
   description?: string;
+  colorsAvailable?: string [];
   isOutOfStock?: boolean;
   sizes?: string[]; // Tamanhos disponíveis
 }
@@ -17,6 +18,7 @@ export const products: Product[] = [
     name: 'High Stamp Black',
     price: 69.90,
     promotionalPrice: 49.90,
+    colorsAvailable: ['Preto'],
     sizes: ['M'],
     imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Stamp_Black_Front.webp', '/products/details/camisasM/High_Tee_Stamp_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Stamp_Black_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/High_Tee_Stamp_Black_Back.webp',
@@ -25,6 +27,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: 'High Tee Chaveiro Black',
+    colorsAvailable: ['Black'],
     sizes: ['M'],
     price: 69.90,
     promotionalPrice: 49.90,
@@ -57,6 +60,7 @@ export const products: Product[] = [
     name: 'High Tee Origami Black',
     price: 69.90,
     promotionalPrice: 49.90,
+    colorsAvailable: ['Black'],
     sizes: ['G', 'GG'],
     imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Origami_Black_Front.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Back.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasG/High_Tee_Origami_Black_Back.webp',
@@ -68,7 +72,6 @@ export const products: Product[] = [
     price: 69.90,
     promotionalPrice: 49.90,
     isOutOfStock: true,
-    sizes: ['M'],
     imagesUrlColumn: ['/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Front.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Back.webp', '/products/details/camisasM/Vlone_Tee_VSpider_White_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/Vlone_Tee_VSpider_White_Back.webp',
     imageAlt: 'Camisa VLone Spider White branca com estampa de aranha e logo V nas costas'
@@ -78,6 +81,7 @@ export const products: Product[] = [
     name: 'Blunt Tee Basket Fire',
     price: 69.90,
     promotionalPrice: 49.90,
+    colorsAvailable: ['Off'],
     sizes: ['M'],
     imagesUrlColumn: ['/products/mockups_still/camisasM/Blunt_Tee_BasketFire_White_Front.webp', '/products/details/camisasM/Blunt_Tee_BasketFire_White_Detail_Back.webp'],
     imageUrl: '/products/mockups_still/camisasM/Blunt_Tee_BasketFire_White_Back.webp',
@@ -88,6 +92,7 @@ export const products: Product[] = [
     name: 'Nike Tee Air 90 Black',
     price: 69.90,
     promotionalPrice: 49.90,
+    colorsAvailable: ['Black'],
     sizes: ['M'],
     imagesUrlColumn: ['/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Back.webp',
@@ -98,6 +103,7 @@ export const products: Product[] = [
     name: 'High Tee Soldiers Black',
     price: 69.90,
     promotionalPrice: 49.90,
+    colorsAvailable: ['Black'],
     sizes: ['G'],
     imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Front.webp', '/products/details/camisasG/High_Tee_Soldiers_Black_Detail_Back.webp'],
     imageUrl: '/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Back.webp',
