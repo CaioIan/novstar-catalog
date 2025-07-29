@@ -32,7 +32,7 @@ export const products: Product[] = [
     price: 69.90,
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
-    sizes: ['M'],
+    sizes: ['M', 'G'],
     category: 'short',
     imagesUrlColumn: ['/products/mockups_still/shorts/linho/Short_Linho_Off_Back.png', '/products/details/shorts/linho/Short_Linho_Off_Details_Bolso.png', '/products/details/shorts/linho/Short_Linho_Off_Details_Back.png', '/products/details/shorts/linho/Short_Linho_Off_Details_Front.png'],
     imageUrl: '/products/mockups_still/shorts/linho/Short_Linho_Off_Front.png',
