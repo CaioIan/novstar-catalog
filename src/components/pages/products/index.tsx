@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { notFound } from 'next/navigation';
 import Image from 'next/image';
-import { products } from '@/data/products';
+import { products, generateProductDescription } from '@/data/products'; // ← Adicionar generateProductDescription aqui
 import { formatCurrency } from '@/utils/format';
 import { sendGTMEvent } from '@next/third-parties/google';
 
@@ -23,7 +23,7 @@ export function ProductPage({ productId }: ProductPageProps) {
     notFound();
   }
 
-  // Inicializar cor selecionada - CORREÇÃO: usar useEffect
+  // Inicializar cor selecionada
   useEffect(() => {
     if (product?.colorsAvailable && product.colorsAvailable.length > 0) {
       setSelectedColor(product.colorsAvailable[0]);
@@ -31,17 +31,10 @@ export function ProductPage({ productId }: ProductPageProps) {
   }, [product]);
 
   const allImages = [product.imageUrl, ...(product.imagesUrlColumn || [])];
-  
-  // Todos os tamanhos sempre visíveis
   const allSizes = ['M', 'G', 'GG'];
 
-  // Função para controlar o movimento do mouse na imagem
-  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = ((e.clientX - rect.left) / rect.width) * 100;
-    const y = ((e.clientY - rect.top) / rect.height) * 100;
-    setMousePosition({ x, y });
-  };
+  // ✅ GERAR DESCRIÇÃO AUTOMÁTICA BASEADA NA CATEGORIA
+  const productDescription = generateProductDescription(product);
 
   // Helper para cores de fundo dos círculos
   const getColorBackground = (color: string): string => {
@@ -60,6 +53,14 @@ export function ProductPage({ productId }: ProductPageProps) {
     return colorMap[color] || 'bg-gray-200';
   };
 
+  // Função para controlar o movimento do mouse na imagem
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setMousePosition({ x, y });
+  };
+
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-8">
@@ -67,7 +68,7 @@ export function ProductPage({ productId }: ProductPageProps) {
         {/* Coluna da imagem principal e miniaturas */}
         <div className="md:col-span-8">
           <div 
-            className="relative mb-4 bg-gray-100 rounded-lg overflow-hidden w-full max-w-[700px] aspect-square mx-auto"
+            className="relative mb-4 bg-gray-100 rounded-lg overflow-hidden w-full max-w-[700px] aspect-square mx-auto cursor-zoom-in"
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}
             onMouseLeave={() => setIsHovering(false)}
@@ -76,8 +77,8 @@ export function ProductPage({ productId }: ProductPageProps) {
               src={allImages[selectedImageIndex]}
               alt={product.imageAlt}
               fill
-              className={`object-cover ease-out ${
-                isHovering ? 'scale-300' : 'scale-100'
+              className={`object-cover transition-all duration-300 ease-out ${
+                isHovering ? 'scale-150' : 'scale-100'
               }`}
               style={{
                 transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
@@ -86,17 +87,7 @@ export function ProductPage({ productId }: ProductPageProps) {
               sizes="(max-width: 768px) 100vw, (max-width: 1024px) 500px, (max-width: 1280px) 600px, 700px"
             />
             
-            {/* Badge DROP ST 2 no canto superior direito */}
-            <div className="absolute top-4 right-4 z-10">
-              <div className="relative w-20 h-8">
-                <Image
-                  src="/drops/drop_st_2_badge.png"
-                  alt="DROP ST 2"
-                  fill
-                  className="object-contain"
-                />
-              </div>
-            </div>
+            
           </div>
           
           {/* Miniaturas */}
@@ -159,7 +150,7 @@ export function ProductPage({ productId }: ProductPageProps) {
             )}
           </div>
 
-           {/* Cores disponíveis - SEMPRE mostrar se existir cores - RESPONSIVO */}
+          {/* Cores disponíveis */}
           {product.colorsAvailable && product.colorsAvailable.length > 0 && (
             <div className="mb-4 sm:mb-6">
               <h3 className="text-base sm:text-lg font-medium text-gray-900 mb-2">
@@ -170,7 +161,7 @@ export function ProductPage({ productId }: ProductPageProps) {
                   <button
                     key={color}
                     onClick={() => setSelectedColor(color)}
-                    className={`cursor-pointer relative w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 transition-all duration-200 ${
+                    className={`relative w-8 h-8 sm:w-10 sm:h-10 rounded-full border-2 transition-all duration-200 ${
                       selectedColor === color
                         ? 'border-gray-900 scale-110'
                         : 'border-gray-300 hover:border-gray-500'
@@ -183,8 +174,7 @@ export function ProductPage({ productId }: ProductPageProps) {
             </div>
           )}
 
-
-          {/* Tamanhos - TODOS sempre visíveis */}
+          {/* Tamanhos */}
           <div className="mb-6">
             <h3 className="text-lg font-medium text-gray-900 mb-2">Tamanhos:</h3>
             <div className="flex gap-2">
@@ -200,7 +190,6 @@ export function ProductPage({ productId }: ProductPageProps) {
                     }`}
                   >
                     {size}
-                    {/* Traço diagonal para tamanhos não disponíveis */}
                     {!isAvailable && (
                       <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                         <div className="w-full h-[1px] bg-gray-400 rotate-45 transform origin-center"></div>
@@ -209,7 +198,14 @@ export function ProductPage({ productId }: ProductPageProps) {
                   </span>
                 );
               })}
+            </div>
+          </div>
 
+          {/* ✅ DESCRIÇÃO DO PRODUTO - USANDO A FUNÇÃO */}
+          <div className="mb-6">
+            <h3 className="text-lg font-medium text-gray-900 mb-2">Descrição:</h3>
+            <div className="text-gray-600 leading-relaxed whitespace-pre-line">
+              {productDescription}
             </div>
           </div>
 
@@ -219,33 +215,16 @@ export function ProductPage({ productId }: ProductPageProps) {
               disabled 
               className="w-full bg-gray-400 text-white py-3 px-6 rounded-md font-medium text-lg cursor-not-allowed mb-8"
             >
-              Produto Esgotado
+              Produto esgotado
             </button>
           ) : (
-            <a 
-              href="https://wa.me/558592079518?text=Fala%20mano!%20Tenho%20interesse%20em%20uma%20pe%C3%A7a%20da%20VORSE!" 
-              target="_blank"
-              rel="noopener noreferrer"
+            <button 
+              onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })}
+              className="w-full bg-gray-950 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer hover:scale-105"
             >
-              <button 
-                onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })}
-                className="w-full bg-black hover:bg-[#373737] cursor-pointer text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 mb-8"
-              >
-                COMPRAR
-              </button>
-            </a>
+              Comprar Agora
+            </button>
           )}
-
-          {/* Descrição do produto */}
-          <div>
-            <h2 className="text-xl font-semibold mb-2">Descrição</h2>
-            <div className="space-y-1">
-              <p className="text-gray-600">Malha 100% algodão: macia e resistente</p>
-              <p className="text-gray-600">Fio 30.1 penteado: qualidade superior no toque e durabilidade</p>
-              <p className="text-gray-600">Reforço ombro a ombro: acabamento firme</p>
-              <p className="text-gray-600">Modelagem Oversized</p>
-            </div>
-          </div>
         </div>
       </div>
     </div>
