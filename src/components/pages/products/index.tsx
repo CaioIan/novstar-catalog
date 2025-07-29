@@ -77,8 +77,8 @@ export function ProductPage({ productId }: ProductPageProps) {
               src={allImages[selectedImageIndex]}
               alt={product.imageAlt}
               fill
-              className={`object-cover transition-all duration-300 ease-out ${
-                isHovering ? 'scale-150' : 'scale-100'
+              className={`object-cover ease-out ${
+                isHovering ? 'scale-300' : 'scale-100'
               }`}
               style={{
                 transformOrigin: `${mousePosition.x}% ${mousePosition.y}%`,
