@@ -149,6 +149,30 @@ export const products: Product[] = [
     imageUrl: '/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Back.webp',
     imageAlt: 'Camisa High Tee Soldiers Black preta com estampa militar de soldados nas costas'
   },
+  {
+    id: 12,
+    name: 'Trip Side Tee Angel',
+    price: 69.90,
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_AkAngel_Black_Front.webp', '/products/details/camisasM/Trip_Tee_AkAngel_Black_Detail_Back.webp', '/products/details/camisasM/Trip_Tee_AkAngel_Black_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasM/Trip_Tee_AkAngel_Black_Back.webp',
+    imageAlt: 'Camisa Trip Side Angel, um anjo segurando uma ak 47'
+  },
+  {
+    id: 13,
+    name: 'Chronic Tee Frase',
+    price: 69.90,
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Branco'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasG/Chronic_Tee_Livrai_White_Front.webp', '/products/details/camisasG/Chronic_Tee_Livrai_White_Detail_Back.webp', '/products/details/camisasG/Chronic_Tee_Livrai_White_Detail_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasG/Chronic_Tee_Livrai_White_Back.webp',
+    imageAlt: 'Camisa da Chronic com frase "Livrai-me dos inimigos e dos maus amigos'
+  },
 ];
 
 // Função para gerar descrição baseada na categoria

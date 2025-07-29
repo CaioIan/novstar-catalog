@@ -32,7 +32,7 @@ export function ProductCard({
 
   return (
     <Link onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id, name } })} href={`/product/${id}`}>
-      <div className="flex flex-col justify-between bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300 group">
+      <div className="flex flex-col justify-between bg-white rounded-lg overflow-hidden transition-shadow duration-300 group">
         <div className="relative aspect-square overflow-hidden">
           <Image
             src={imageUrl}
@@ -51,24 +51,13 @@ export function ProductCard({
             </div>
           )}
           
-          {/* Badge DROP ST 2 no canto superior direito */}
-          <div className="absolute top-2 right-2">
-            <div className="relative w-16 h-6">
-              <Image
-                src="/drops/drop_st_2_badge.png"
-                alt="DROP ST 2"
-                fill
-                className="object-contain"
-              />
-            </div>
-          </div>
         </div>
         <div className="p-4">
-          <h3 className="text-lg font-medium text-gray-500 mb-2 line-clamp-2">
+          <h3 className="text-lg font-medium text-gray-500 line-clamp-2 h-12">
             {name}
           </h3>
           
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0">
             <div className="flex flex-col">
               <span className={promotionalPrice ? 'text-sm text-gray-500 line-through' : 'text-xl font-bold text-gray-950'}>
                 {formattedPrice}
@@ -79,9 +68,6 @@ export function ProductCard({
                 </span>
               )}
             </div>
-            <button className="bg-gray-950 text-white px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 cursor-pointer hover:scale-105">
-              Ver Produto
-            </button>
           </div>
         </div>
       </div>
