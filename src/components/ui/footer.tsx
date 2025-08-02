@@ -11,7 +11,7 @@ export function Footer() {
         height={80}
       />
       <p className="text-sm">
-        © {new Date().getFullYear()} VORSE Company. All rights reserved.
+        © {new Date().getFullYear()} NOVSTAR COMPANY. All rights reserved.
       </p>
     </footer>
   )

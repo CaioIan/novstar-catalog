@@ -26,7 +26,7 @@ export function HomePage() {
 
       <div className="text-center mt-12">
         <p className="text-gray-500">
-          Drop Street 2 por Vorse Company
+          Drop Street 2 por Novstar Company
         </p>
       </div>
     </div>
