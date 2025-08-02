@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Vorse",
-  description: "Loja de Camisetas",
+  title: "NOVSTAR",
+  description: "Pra quem se destaca no corre.",
 };
 
 export default function RootLayout({
