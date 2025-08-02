@@ -1,9 +1,8 @@
 export interface Product {
   id: number;
   name: string;
-  price: number;
   imagesUrlColumn?: string[];
-  promotionalPrice?: number;
+  promotionalPrice: number;
   imageUrl: string;
   imageAlt: string;
   description?: string;
@@ -17,7 +16,6 @@ export const products: Product[] = [
   {
     id: 1,
     name: 'Short Linho Preto',
-    price: 69.90,
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
     sizes: ['M', 'G'],
@@ -29,7 +27,6 @@ export const products: Product[] = [
   {
     id: 2,
     name: 'Short Linho Off',
-    price: 69.90,
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
     sizes: ['M', 'G'],
@@ -40,8 +37,7 @@ export const products: Product[] = [
   },
   {
     id: 3,
-    name: 'High Stamp Black',
-    price: 69.90,
+    name: 'Stamp Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
@@ -52,11 +48,10 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: 'High Tee Chaveiro Black',
+    name: 'Chaveiro Black Streetwear Tee',
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
-    price: 69.90,
     promotionalPrice: 49.99,
     imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Front.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Back.webp',
@@ -64,8 +59,7 @@ export const products: Product[] = [
   },
   {
     id: 5,
-    name: 'Chronic Tee São Jorge Black',
-    price: 69.90,
+    name: 'São Jorge Black Streetwear Tee',
     promotionalPrice: 49.99,
     isOutOfStock: true,
     colorsAvailable: ['Preto'], // ← Adicionar
@@ -77,8 +71,7 @@ export const products: Product[] = [
   },
   {
     id: 6,
-    name: 'Trip Side Dragon Tiger Red',
-    price: 69.90,
+    name: 'Dragon Tiger Red Streetwear Tee',
     promotionalPrice: 49.99,
     isOutOfStock: true,
     colorsAvailable: ['Branco'], // ← Adicionar
@@ -90,8 +83,7 @@ export const products: Product[] = [
   },
   {
     id: 7,
-    name: 'High Tee Origami Black',
-    price: 69.90,
+    name: 'Origami Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['G', 'GG'],
@@ -102,8 +94,7 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'VLone Spider White',
-    price: 69.90,
+    name: 'V Spider White Streetwear Tee',
     promotionalPrice: 49.99,
     isOutOfStock: true,
     colorsAvailable: ['Branco'], // ← Adicionar
@@ -115,8 +106,7 @@ export const products: Product[] = [
   },
   {
     id: 9,
-    name: 'Blunt Tee Basket Fire',
-    price: 69.90,
+    name: 'Basket Fire Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Off'],
     sizes: ['M'],
@@ -127,8 +117,7 @@ export const products: Product[] = [
   },
   {
     id: 10,
-    name: 'Nike Tee Air 90 Black',
-    price: 69.90,
+    name: 'Air 90 Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
@@ -139,8 +128,7 @@ export const products: Product[] = [
   },
   {
     id: 11,
-    name: 'High Tee Soldiers Black',
-    price: 69.90,
+    name: 'Soldiers Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['G'],
@@ -151,8 +139,7 @@ export const products: Product[] = [
   },
   {
     id: 12,
-    name: 'Trip Side Tee Angel',
-    price: 69.90,
+    name: 'Angel Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
@@ -163,8 +150,7 @@ export const products: Product[] = [
   },
   {
     id: 13,
-    name: 'Chronic Tee Frase',
-    price: 69.90,
+    name: 'Streetwear Tee Frase ',
     promotionalPrice: 49.99,
     colorsAvailable: ['Branco'],
     sizes: ['M'],

@@ -8,8 +8,7 @@ import { sendGTMEvent } from '@next/third-parties/google';
 interface ProductCardProps {
   id: number;
   name: string;
-  price: number;
-  promotionalPrice?: number;
+  promotionalPrice: number;
   imageUrl: string;
   imageAlt?: string;
   isOutOfStock?: boolean;
@@ -19,14 +18,12 @@ interface ProductCardProps {
 export function ProductCard({
   id,
   name,
-  price,
   promotionalPrice,
   imageUrl,
   imageAlt = name,
   isOutOfStock = false,
 }: ProductCardProps) {
-  const formattedPrice = formatCurrency(price);
-  const formattedPromotionalPrice = promotionalPrice ? formatCurrency(promotionalPrice) : null;
+  const formattedPrice = formatCurrency(promotionalPrice);
 
   // Todos os tamanhos sempre visíveis
 
@@ -44,8 +41,8 @@ export function ProductCard({
           
           {/* Badge ESGOTADO no canto superior esquerdo da imagem */}
           {isOutOfStock && (
-            <div className="absolute top-2 left-2">
-              <span className="inline-block bg-black text-white text-xs font-bold px-2 py-1 rounded-[20px] border border-gray">
+            <div className="absolute top-7 left-4">
+              <span className="inline-block bg-red-800 text-white text-xs font-bold px-2 py-1 rounded-[20px] border border-gray">
                 Esgotado
               </span>
             </div>
@@ -59,14 +56,9 @@ export function ProductCard({
           
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0">
             <div className="flex flex-col">
-              <span className={promotionalPrice ? 'text-sm text-gray-500 line-through' : 'text-xl font-bold text-gray-950'}>
+              <span className="text-xl font-bold text-gray-950">
                 {formattedPrice}
               </span>
-              {formattedPromotionalPrice && (
-                <span className="text-xl font-bold text-gray-950">
-                  {formattedPromotionalPrice}
-                </span>
-              )}
             </div>
           </div>
         </div>

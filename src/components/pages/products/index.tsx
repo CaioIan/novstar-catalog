@@ -131,23 +131,9 @@ export function ProductPage({ productId }: ProductPageProps) {
 
           {/* Seção de preços */}
           <div className="mb-6">
-            {product.promotionalPrice ? (
-              <>
-                <p className="text-lg text-gray-500 line-through">
-                  {formatCurrency(product.price)}
-                </p>
-                <p className="text-3xl font-bold text-gray-900">
-                  {formatCurrency(product.promotionalPrice)}
-                </p>
-                <p className="text-sm text-green-600 font-medium">
-                  {Math.round((1 - product.promotionalPrice / product.price) * 100)}% de desconto
-                </p>
-              </>
-            ) : (
-              <p className="text-3xl font-bold text-gray-900">
-                {formatCurrency(product.price)}
-              </p>
-            )}
+            <p className="text-3xl font-bold text-gray-900">
+              {formatCurrency(product.promotionalPrice)}
+            </p>
           </div>
 
           {/* Cores disponíveis */}

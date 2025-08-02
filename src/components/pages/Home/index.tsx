@@ -1,11 +1,18 @@
 import { products } from '@/data/products';
 import { ProductCard } from './ProductCard';
+import Image from 'next/image';
 
 export function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <img src="/drops/drop_street_2_ banner.png" alt="Drop Street Collection" />
+        <Image 
+          src="/drops/drop_street_2_ banner.png" 
+          alt="Drop Street Collection"
+          width={800}
+          height={400}
+          className="mx-auto"
+        />
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -14,7 +21,6 @@ export function HomePage() {
             key={product.id}
             id={product.id}
             name={product.name}
-            price={product.price}
             promotionalPrice={product.promotionalPrice}
             imageUrl={product.imageUrl}
             imageAlt={product.imageAlt}
