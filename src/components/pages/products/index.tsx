@@ -131,7 +131,10 @@ export function ProductPage({ productId }: ProductPageProps) {
 
           {/* Seção de preços */}
           <div className="mb-6">
-            <p className="text-3xl font-bold text-gray-900">
+            <p className="text-lg text-gray-500 line-through mb-1">
+              {formatCurrency(49.99)}
+            </p>
+            <p className="text-3xl font-bold text-red-600">
               {formatCurrency(product.promotionalPrice)}
             </p>
           </div>
