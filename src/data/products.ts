@@ -62,7 +62,7 @@ export const products: Product[] = [
     name: 'Origami Black Streetwear Tee',
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
-    sizes: ['G', 'GG'],
+    sizes: ['GG'],
     category: 'camisa',
     imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Origami_Black_Front.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Back.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasG/High_Tee_Origami_Black_Back.webp',
