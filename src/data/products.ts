@@ -92,17 +92,6 @@ export const products: Product[] = [
   },
   {
     id: 8,
-    name: 'Basket Fire Streetwear Tee',
-    promotionalPrice: 39.99,
-    colorsAvailable: ['Off'],
-    sizes: ['M'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasM/Blunt_Tee_BasketFire_White_Front.webp', '/products/details/camisasM/Blunt_Tee_BasketFire_White_Detail_Back.webp'],
-    imageUrl: '/products/mockups_still/camisasM/Blunt_Tee_BasketFire_White_Back.webp',
-    imageAlt: 'Camisa Blunt Tee Basket Fire branca com estampa de bola de basquete em chamas nas costas'
-  },
-  {
-    id: 9,
     name: 'Short Linho Preto',
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
@@ -113,7 +102,7 @@ export const products: Product[] = [
     imageAlt: 'Short Linho Preto confortável e versátil para o dia a dia'
   },
   {
-    id: 10,
+    id: 9,
     name: 'Short Linho Off',
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
