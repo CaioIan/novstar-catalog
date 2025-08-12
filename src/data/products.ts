@@ -19,7 +19,7 @@ export const products: Product[] = [
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Front.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Back.webp',
     imageAlt: 'Camisa High Tee Chaveiro Black preta com estampa de chaveiro nas costas e wordmark High no peito'
@@ -27,7 +27,7 @@ export const products: Product[] = [
   {
     id: 2,
     name: 'Stamp Black Streetwear Tee',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
@@ -38,7 +38,7 @@ export const products: Product[] = [
   {
     id: 3,
     name: 'Air 90 Black Streetwear Tee',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
@@ -49,7 +49,7 @@ export const products: Product[] = [
   {
     id: 4,
     name: 'Angel Black Streetwear Tee',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
@@ -60,7 +60,7 @@ export const products: Product[] = [
   {
     id: 5,
     name: 'Origami Black Streetwear Tee',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['GG'],
     category: 'camisa',
@@ -71,7 +71,7 @@ export const products: Product[] = [
   {
     id: 6,
     name: 'Soldiers Black Streetwear Tee',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['G'],
     category: 'camisa',
@@ -82,7 +82,7 @@ export const products: Product[] = [
   {
     id: 7,
     name: 'Streetwear Tee Frase ',
-    promotionalPrice: 39.99,
+    promotionalPrice: 49.99,
     colorsAvailable: ['Branco'],
     sizes: ['M'],
     category: 'camisa',

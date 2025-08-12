@@ -56,10 +56,7 @@ export function ProductCard({
           
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3 md:gap-0">
             <div className="flex flex-col">
-              <span className="text-sm text-gray-500 line-through">
-                {formatCurrency(49.99)}
-              </span>
-              <span className="text-xl font-bold text-red-600">
+              <span className="text-xl font-bold text-black">
                 {formattedPrice}
               </span>
             </div>

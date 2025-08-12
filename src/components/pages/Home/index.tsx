@@ -1,18 +1,10 @@
 import { products } from '@/data/products';
 import { ProductCard } from './ProductCard';
-import Image from 'next/image';
 
 export function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
-        <Image
-          src="/drops/queima_de_estoque_agosto_banner_white.png"
-          alt="Drop Street Collection"
-          width={800}
-          height={400}
-          className="mx-auto"
-        />
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
