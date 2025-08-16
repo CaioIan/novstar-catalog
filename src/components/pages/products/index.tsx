@@ -67,7 +67,7 @@ export function ProductPage({ productId }: ProductPageProps) {
         
         {/* Coluna da imagem principal e miniaturas */}
         <div className="md:col-span-8">
-          <div 
+          <div
             className="relative mb-4 bg-gray-100 rounded-lg overflow-hidden w-full max-w-[700px] aspect-square mx-auto cursor-zoom-in"
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovering(true)}

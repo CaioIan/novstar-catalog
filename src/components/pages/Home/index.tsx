@@ -1,10 +1,19 @@
 import { products } from '@/data/products';
+import Image from 'next/image';
 import { ProductCard } from './ProductCard';
 
 export function HomePage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
+        <Image
+          src="/drops/drop_street_3_banner_c_frase.png"
+          alt="Drop Street 3 Banner"
+          width={400}
+          height={500}
+          className="mx-auto rounded-lg"
+          priority
+        />
       </div>
 
       <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6">
