@@ -15,17 +15,6 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Chaveiro Black Streetwear Tee',
-    colorsAvailable: ['Preto'],
-    sizes: ['M'],
-    category: 'camisa',
-    promotionalPrice: 49.99,
-    imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Front.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Chaveiro_Black_Detail_Front.webp'],
-    imageUrl: '/products/mockups_still/camisasM/High_Tee_Chaveiro_Black_Back.webp',
-    imageAlt: 'Camisa High Tee Chaveiro Black preta com estampa de chaveiro nas costas e wordmark High no peito'
-  },
-  {
-    id: 2,
     name: 'Stamp Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -36,7 +25,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa High Stamp Black preta com estampa verde nas costas e logo da High Company no peito'
   },
   {
-    id: 3,
+    id: 2,
     name: 'Air 90 Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -47,7 +36,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa Nike Tee Air 90 Black preta com estampa retrô Air 90 nas costas'
   },
   {
-    id: 4,
+    id: 3,
     name: 'Angel Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -58,7 +47,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa Trip Side Angel, um anjo segurando uma ak 47'
   },
   {
-    id: 5,
+    id: 4,
     name: 'Origami Black Streetwear Tee',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -69,29 +58,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa High Tee Origami Black preta com estampa de origami geométrico nas costas'
   },
   {
-    id: 6,
-    name: 'Soldiers Black Streetwear Tee',
-    promotionalPrice: 49.99,
-    colorsAvailable: ['Preto'],
-    sizes: ['G'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Front.webp', '/products/details/camisasG/High_Tee_Soldiers_Black_Detail_Back.webp'],
-    imageUrl: '/products/mockups_still/camisasG/High_Tee_Soldiers_Black_Back.webp',
-    imageAlt: 'Camisa High Tee Soldiers Black preta com estampa militar de soldados nas costas'
-  },
-  {
-    id: 7,
-    name: 'Streetwear Tee Frase ',
-    promotionalPrice: 49.99,
-    colorsAvailable: ['Branco'],
-    sizes: ['M'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasG/Chronic_Tee_Livrai_White_Front.webp', '/products/details/camisasG/Chronic_Tee_Livrai_White_Detail_Back.webp', '/products/details/camisasG/Chronic_Tee_Livrai_White_Detail_Front.webp'],
-    imageUrl: '/products/mockups_still/camisasG/Chronic_Tee_Livrai_White_Back.webp',
-    imageAlt: 'Camisa da Chronic com frase "Livrai-me dos inimigos e dos maus amigos'
-  },
-  {
-    id: 8,
+    id: 5,
     name: 'Short Linho Preto',
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
@@ -102,7 +69,7 @@ export const products: Product[] = [
     imageAlt: 'Short Linho Preto confortável e versátil para o dia a dia'
   },
   {
-    id: 9,
+    id: 6,
     name: 'Short Linho Off',
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
