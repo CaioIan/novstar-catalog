@@ -204,8 +204,8 @@ export function ProductPage({ productId }: ProductPageProps) {
               Produto esgotado
             </button>
           ) : (
-            <a href="https://wa.me/558592079518" onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })}>
-              <button 
+            <a target="_blank" href="https://wa.me/558592079518" onClick={() => sendGTMEvent({ event: 'buttonClicked', value: { id: product.id, name: product.name } })}>
+              <button
                 className="w-full bg-gray-950 text-white py-3 px-6 rounded-md font-medium text-lg transition-all duration-200 cursor-pointer hover:scale-105"
               >
                 Comprar Agora
