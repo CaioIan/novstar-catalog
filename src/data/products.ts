@@ -15,50 +15,105 @@ export interface Product {
 export const products: Product[] = [
   {
     id: 1,
-    name: 'Stamp Black Streetwear Tee',
+    name: 'Grizzly Tee Basket Bear',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Stamp_Black_Front.webp', '/products/details/camisasM/High_Tee_Stamp_Black_Detail_Back.webp', '/products/details/camisasM/High_Tee_Stamp_Black_Detail_Front.webp'],
-    imageUrl: '/products/mockups_still/camisasM/High_Tee_Stamp_Black_Back.webp',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/MOCKUP_GRIZZLY_TEE_BEAR_BLACK_M_FRONT.png'],
+    imageUrl: '/products/mockups_still/camisasM/MOCKUP_GRIZZLY_TEE_BEAR_BLACK_M_BACK.png',
     imageAlt: 'Camisa High Stamp Black preta com estampa verde nas costas e logo da High Company no peito'
   },
   {
     id: 2,
-    name: 'Air 90 Black Streetwear Tee',
+    name: 'High Tee Calango Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/HIGH_TEE_CALANGO_BLACK_FRONT.png'],
+    imageUrl: '/products/mockups_still/camisasM/HIGH_TEE_CALANGO_BLACK_BACK.png',
+    imageAlt: 'Camisa High Tee Calango Black preta'
+  },
+  {
+    id: 3,
+    name: 'Chronic Tee Balaclava Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/CHRONIC_TEE_BALACLAVA_BLACK_FRONT.png'],
+    imageUrl: '/products/mockups_still/camisasM/CHRONIC_TEE_BALACLAVA_BLACK_BACK.png',
+    imageAlt: 'Camisa Chronic Tee Balaclava Black preta'
+  },
+  {
+    id: 4,
+    name: 'Tripside X Carpa Tee Peixe White',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Branco'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/TRIPSIDE_X_CARPA_TEE_PEIXE_WHITE_FRONT.png'],
+    imageUrl: '/products/mockups_still/camisasM/TRIPSIDE_X_CARPA_TEE_PEIXE_WHITE_BACK.png',
+    imageAlt: 'Camisa Tripside X Carpa Tee Peixe branca'
+  },
+  {
+    id: 5,
+    name: 'Tripside X Carpa Tee Peixe Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['G'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasG/TRIPSIDE_X_CARPA_TEE_PEIXE_BLACK_FRONT.png'],
+    imageUrl: '/products/mockups_still/camisasG/TRIPSIDE_X_CARPA_TEE_PEIXE_BLACK_BACK.png',
+    imageAlt: 'Camisa Tripside X Carpa Tee Peixe preta'
+  },
+  {
+    id: 6,
+    name: 'NikeSB Tee Basic Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/NIKESB_TEE_BASIC_BLACK_BACK.png'],
+    imageUrl: '/products/mockups_still/camisasM/NIKESB_TEE_BASIC_BLACK_FRONT.png',
+    imageAlt: 'Camisa NikeSB Tee Basic Black preta'
+  },
+  {
+    id: 7,
+    name: 'Nike Tee Ice Code Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/NIKE_TEE_ICECODE_BLACK_FRONT.png'],
+    imageUrl: '/products/mockups_still/camisasM/NIKE_TEE_ICECODE_BLACK_BACK.png',
+    imageAlt: 'Camisa Nike Tee Ice Code Black preta'
+  },
+  {
+    id: 8,
+    name: 'High Tee Stamp Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imagesUrlColumn: ['/products/mockups_still/camisasM/High_Tee_Stamp_Black_Front.webp'],
+    imageUrl: '/products/mockups_still/camisasM/High_Tee_Stamp_Black_Back.webp',
+    imageAlt: 'Camisa High Tee Stamp Black preta'
+  },
+  {
+    id: 9,
+    name: 'Nike Tee Air 90 Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
     imagesUrlColumn: ['/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Front.webp'],
     imageUrl: '/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Back.webp',
-    imageAlt: 'Camisa Nike Tee Air 90 Black preta com estampa retrô Air 90 nas costas'
+    imageAlt: 'Camisa Nike Tee Air 90 Black preta'
   },
   {
-    id: 3,
-    name: 'Angel Black Streetwear Tee',
-    promotionalPrice: 49.99,
-    colorsAvailable: ['Preto'],
-    sizes: ['M'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasM/Trip_Tee_AkAngel_Black_Front.webp', '/products/details/camisasM/Trip_Tee_AkAngel_Black_Detail_Back.webp', '/products/details/camisasM/Trip_Tee_AkAngel_Black_Detail_Front.webp'],
-    imageUrl: '/products/mockups_still/camisasM/Trip_Tee_AkAngel_Black_Back.webp',
-    imageAlt: 'Camisa Trip Side Angel, um anjo segurando uma ak 47'
-  },
-  {
-    id: 4,
-    name: 'Origami Black Streetwear Tee',
-    promotionalPrice: 49.99,
-    colorsAvailable: ['Preto'],
-    sizes: ['GG'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasG/High_Tee_Origami_Black_Front.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Back.webp', '/products/details/camisasG/High_Tee_Origami_Black_Detail_Front.webp'],
-    imageUrl: '/products/mockups_still/camisasG/High_Tee_Origami_Black_Back.webp',
-    imageAlt: 'Camisa High Tee Origami Black preta com estampa de origami geométrico nas costas'
-  },
-  {
-    id: 5,
+    id: 10,
     name: 'Short Linho Preto',
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
@@ -69,7 +124,7 @@ export const products: Product[] = [
     imageAlt: 'Short Linho Preto confortável e versátil para o dia a dia'
   },
   {
-    id: 6,
+    id: 11,
     name: 'Short Linho Off',
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
