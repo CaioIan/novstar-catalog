@@ -48,28 +48,6 @@ export const products: Product[] = [
   },
   {
     id: 4,
-    name: 'NikeSB Tee Basic Black',
-    promotionalPrice: 49.99,
-    colorsAvailable: ['Preto'],
-    sizes: ['M'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasM/NIKESB_TEE_BASIC_BLACK_BACK.png'],
-    imageUrl: '/products/mockups_still/camisasM/NIKESB_TEE_BASIC_BLACK_FRONT.png',
-    imageAlt: 'Camisa NikeSB Tee Basic Black preta'
-  },
-  {
-    id: 5,
-    name: 'Nike Tee Ice Code Black',
-    promotionalPrice: 49.99,
-    colorsAvailable: ['Preto'],
-    sizes: ['M'],
-    category: 'camisa',
-    imagesUrlColumn: ['/products/mockups_still/camisasM/NIKE_TEE_ICECODE_BLACK_FRONT.png'],
-    imageUrl: '/products/mockups_still/camisasM/NIKE_TEE_ICECODE_BLACK_BACK.png',
-    imageAlt: 'Camisa Nike Tee Ice Code Black preta'
-  },
-  {
-    id: 6,
     name: 'High Tee Stamp Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -80,7 +58,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa High Tee Stamp Black preta'
   },
   {
-    id: 7,
+    id: 5,
     name: 'Nike Tee Air 90 Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -91,7 +69,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa Nike Tee Air 90 Black preta'
   },
   {
-    id: 8,
+    id: 6,
     name: 'Short Linho Preto',
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
@@ -102,7 +80,7 @@ export const products: Product[] = [
     imageAlt: 'Short Linho Preto confortável e versátil para o dia a dia'
   },
   {
-    id: 9,
+    id: 7,
     name: 'Short Linho Off',
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
