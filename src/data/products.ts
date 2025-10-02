@@ -40,7 +40,7 @@ export const products: Product[] = [
     name: 'Chronic Tee Balaclava Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
-    sizes: ['M', 'G'],
+    sizes: ['G'],
     category: 'camisa',
     imagesUrlColumn: ['/products/mockups_still/camisasM/CHRONIC_TEE_BALACLAVA_BLACK_FRONT.png'],
     imageUrl: '/products/mockups_still/camisasM/CHRONIC_TEE_BALACLAVA_BLACK_BACK.png',
