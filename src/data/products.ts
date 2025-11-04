@@ -14,7 +14,119 @@ export interface Product {
 
 export const products: Product[] = [
   {
-    id: 1,
+    id: 1, // ID Corrigido
+    name: 'High Tee Blue Dragon Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/HIGH_TEE_BLUE_DRAGON_BLACK_M_COSTAS.png',
+    imagesUrlColumn: [
+      '/drops/drop-street-3-dlx/CAMISAS/STILL/HIGH_TEE_BLUE_DRAGON_BLACK_M_FRENTE.png',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/HIGH_TEE_BLUE_DRAGON_BLACK_DETAILS_01.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/HIGH_TEE_BLUE_DRAGON_BLACK_DETAILS_02.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/HIGH_TEE_BLUE_DRAGON_BLACK_DETAILS_03.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/HIGH_TEE_BLUE_DRAGON_BLACK_DETAILS_04.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/HIGH_TEE_BLUE_DRAGON_BLACK_DETAILS_05.jpg'
+    ],
+    imageAlt: 'Camisa High Tee Blue Dragon Black'
+  },
+  {
+    id: 2, // ID Corrigido
+    name: 'Sevenfold Tee Racionais Lua Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_M_COSTAS.png',
+    imagesUrlColumn: [
+      '/drops/drop-street-3-dlx/CAMISAS/STILL/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_M_FRENTE.png',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_DETAILS_01.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_DETAILS_02.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_DETAILS_03.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_DETAILS_04.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_DETAILS_05.jpg'
+    ],
+    imageAlt: 'Camisa Sevenfold Tee Racionais Lua Black'
+  },
+  {
+    id: 3, // ID Corrigido
+    name: 'Sevenfold Tee São Jorge Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['M'],
+    category: 'camisa',
+    imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/SEVENFOLD_TEE_SAOJORGE_BLACK_M_COSTAS.png',
+    imagesUrlColumn: [
+      '/drops/drop-street-3-dlx/CAMISAS/STILL/SEVENFOLD_TEE_SAOJORGE_BLACK_M_FRENTE.png',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_SAOJORGE_BLACK_DETAILS_01.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_SAOJORGE_BLACK_DETAILS_02.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_SAOJORGE_BLACK_DETAILS_03.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_SAOJORGE_BLACK_DETAILS_04.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/SEVENFOLD_TEE_SAOJORGE_BLACK_DETAILS_05.jpg'
+    ],
+    imageAlt: 'Camisa Sevenfold Tee Sao Jorge Black'
+  },
+  {
+    id: 4, // ID Corrigido
+    name: 'Thugnine Tee Powerfull Horse Black',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Preto'],
+    sizes: ['G'],
+    category: 'camisa',
+    imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/THUGNINE_TEE_POWERFULL_HORSE_BLACK_G_COSTAS.png',
+    imagesUrlColumn: [
+      '/drops/drop-street-3-dlx/CAMISAS/STILL/THUGNINE_TEE_POWERFULL_HORSE_BLACK_G_FRENTE.png',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_POWERFULL_HORSE_BLACK_DETAILS_01.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_POWERFULL_HORSE_BLACK_DETAILS_02.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_POWERFULL_HORSE_BLACK_DETAILS_03.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_POWERFULL_HORSE_BLACK_DETAILS_04.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_POWERFULL_HORSE_BLACK_DETAILS_05.jpg'
+    ],
+    imageAlt: 'Camisa Thugnine Tee Powerfull Horse Black'
+  },
+  // --- RESTANTE DOS PRODUTOS ---
+  {
+    id: 5, // ID Corrigido
+    name: 'North Face Tee Basic Off',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Off'],
+    sizes: ['G'],
+    category: 'camisa',
+    imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/NORTH_FACE_BASIC_OFF_G_FRENTE.png',
+    imagesUrlColumn: [
+      '/drops/drop-street-3-dlx/CAMISAS/STILL/NORTH_FACE_BASIC_OFF_G_COSTAS.png',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/NORTH_FACE_BASIC_OFF_DETAILS_01.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/NORTH_FACE_BASIC_OFF_DETAILS_02.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/NORTH_FACE_BASIC_OFF_DETAILS_03.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/NORTH_FACE_BASIC_OFF_DETAILS_04.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/NORTH_FACE_BASIC_OFF_DETAILS_05.jpg'
+    ],
+    imageAlt: 'Camisa North Face Basic Off'
+  },
+  // { id: 6, name: 'Sevenfold Tee Sao Jorge White' } <-- REMOVIDO
+  // { id: 7, name: 'Thugnine Tee Powerfull Horse White' } <-- REMOVIDO
+  {
+    id: 6, // ID Corrigido
+    name: 'Thugnine Tee Youth Club Off',
+    promotionalPrice: 49.99,
+    colorsAvailable: ['Off'],
+    sizes: ['M'],
+    category: 'camisa',
+    imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/THUGNINE_TEE_YOUTH_CLUB_OFF_M_COSTAS.png',
+    imagesUrlColumn: [
+      '/drops/drop-street-3-dlx/CAMISAS/STILL/THUGNINE_TEE_YOUTH_CLUB_OFF_M_FRENTE.png',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_YOUTH_CLUB_OFF_DETAILS_01.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_YOUTH_CLUB_OFF_DETAILS_02.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_YOUTH_CLUB_OFF_DETAILS_03.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_YOUTH_CLUB_OFF_DETAILS_04.jpg',
+      '/drops/drop-street-3-dlx/CAMISAS/DETAILS/THUGNINE_TEE_YOUTH_CLUB_OFF_DETAILS_05.jpg'
+    ],
+    imageAlt: 'Camisa Thugnine Tee Youth Club Off'
+  },
+  // --- PRODUTOS ANTIGOS ---
+  {
+    id: 7, // ID Corrigido
     name: 'Grizzly Tee Basket Bear',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -25,7 +137,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa High Stamp Black preta com estampa verde nas costas e logo da High Company no peito'
   },
   {
-    id: 2,
+    id: 8, // ID Corrigido
     name: 'High Tee Calango Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -36,7 +148,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa High Tee Calango Black preta'
   },
   {
-    id: 3,
+    id: 9, // ID Corrigido
     name: 'Chronic Tee Balaclava Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -47,7 +159,7 @@ export const products: Product[] = [
     imageAlt: 'Camisa Chronic Tee Balaclava Black preta'
   },
   {
-    id: 4,
+    id: 10, // ID Corrigido
     name: 'High Tee Stamp Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
@@ -58,18 +170,18 @@ export const products: Product[] = [
     imageAlt: 'Camisa High Tee Stamp Black preta'
   },
   {
-    id: 5,
+    id: 11, // ID Corrigido
     name: 'Nike Tee Air 90 Black',
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
     sizes: ['M'],
     category: 'camisa',
     imagesUrlColumn: ['/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Front.webp'],
-    imageUrl: '/products/mockups_still/camisasM/Nike_Tee_Air90_Black_Back.webp',
+    imageUrl: '/products/mockups_still/camisasM/Nike_Tee_Air9Examples_Black_Back.webp',
     imageAlt: 'Camisa Nike Tee Air 90 Black preta'
   },
   {
-    id: 6,
+    id: 12, // ID Corrigido
     name: 'Short Linho Preto',
     promotionalPrice: 39.99,
     colorsAvailable: ['Preto'],
@@ -80,7 +192,7 @@ export const products: Product[] = [
     imageAlt: 'Short Linho Preto confortável e versátil para o dia a dia'
   },
   {
-    id: 7,
+    id: 13, // ID Corrigido
     name: 'Short Linho Off',
     promotionalPrice: 39.99,
     colorsAvailable: ['Off'],
@@ -89,7 +201,7 @@ export const products: Product[] = [
     imagesUrlColumn: ['/products/mockups_still/shorts/linho/Short_Linho_Off_Back.png', '/products/details/shorts/linho/Short_Linho_Off_Details_Bolso.png', '/products/details/shorts/linho/Short_Linho_Off_Details_Back.png', '/products/details/shorts/linho/Short_Linho_Off_Details_Front.png'],
     imageUrl: '/products/mockups_still/shorts/linho/Short_Linho_Off_Front.png',
     imageAlt: 'Short Linho Off elegante e confortável'
-  },
+  }
 ];
 
 // Função para gerar descrição baseada na categoria
