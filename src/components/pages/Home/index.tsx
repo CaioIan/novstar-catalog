@@ -7,8 +7,8 @@ export function HomePage() {
     <div className="container mx-auto px-4 py-8">
       <div className="text-center mb-8">
         <Image
-          src="/drops/dropStreet3Banner.png"
-          alt="Drop Street 3 Banner"
+          src="/drops/DROP STREET 3 DLX Banner.png"
+          alt="Drop Street 3 DLX Banner"
           width={400}
           height={500}
           className="mx-auto rounded-lg"
