@@ -34,9 +34,10 @@ export const products: Product[] = [
   {
     id: 2, // ID Corrigido
     name: 'Sevenfold Tee Racionais Lua Black',
+    isOutOfStock: true,
     promotionalPrice: 49.99,
     colorsAvailable: ['Preto'],
-    sizes: ['M'],
+    sizes: [],
     category: 'camisa',
     imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/SEVENFOLD_TEE_RACIONAIS_LUA_BLACK_M_COSTAS.png',
     imagesUrlColumn: [
@@ -89,9 +90,10 @@ export const products: Product[] = [
   {
     id: 5, // ID Corrigido
     name: 'North Face Tee Basic Off',
+    isOutOfStock: true,
     promotionalPrice: 49.99,
     colorsAvailable: ['Off'],
-    sizes: ['G'],
+    sizes: [],
     category: 'camisa',
     imageUrl: '/drops/drop-street-3-dlx/CAMISAS/STILL/NORTH_FACE_BASIC_OFF_G_FRENTE.png',
     imagesUrlColumn: [
