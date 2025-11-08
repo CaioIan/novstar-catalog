@@ -39,14 +39,14 @@ export function ProductCard({
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
           />
           
-          {/* Badge ESGOTADO no canto superior esquerdo da imagem */}
-          {isOutOfStock && (
-            <div className="absolute top-7 left-4">
-              <span className="inline-block bg-red-800 text-white text-xs font-bold px-2 py-1 rounded-[20px] border border-gray">
-                Esgotado
+
+         {isOutOfStock && (
+          <div className="absolute top-0 right-0 bottom-0 left-0 flex justify-center items-center">
+            <span className="inline-block bg-gray-700 text-white text-xs font-bold px-9 py-2 rounded-[20px] border border-gray z-10">
+              Esgotado
               </span>
-            </div>
-          )}
+              </div>
+            )}
           
         </div>
         <div className="p-4">
